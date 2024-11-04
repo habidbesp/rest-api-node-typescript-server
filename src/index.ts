@@ -5,4 +5,5 @@ import colors from "colors";
 const port = process.env.PORT || 4000;
 server.listen(port, () => {
   console.log(colors.cyan(`REST API in port ${port}`));
+  console.log(colors.yellow.italic(`http://localhost:${port}`));
 });

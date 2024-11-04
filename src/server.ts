@@ -9,7 +9,7 @@ async function connectDB() {
   try {
     await db.authenticate();
     db.sync();
-    console.log(colors.blue("Conexion to Database Success!"));
+    // console.log(colors.blue("Conexion to Database Success!"));
   } catch (error) {
     // console.log(error);
     console.log(colors.red("There was an error connecting to the database!"));
@@ -24,5 +24,9 @@ const server = express();
 server.use(express.json());
 
 server.use("/api/products", router);
+
+server.get("/api", (req, res) => {
+  res.json({ msg: "Desde API" });
+});
 
 export default server;
