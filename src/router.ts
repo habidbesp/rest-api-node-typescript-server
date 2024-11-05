@@ -52,7 +52,7 @@ router.put(
     .withMessage("Invalid Price"),
   body("availability")
     .isBoolean()
-    .withMessage("Invalid Value for disponibility, provide: true or false"),
+    .withMessage("Invalid Value for availability"),
   handleInputErrors,
   updateProduct
 );
