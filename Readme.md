@@ -36,33 +36,33 @@ Visit the Swagger UI to explore and test all the endpoints interactively.
 
   ### Steps
 
-  1. Clone the repository:
+1. Clone the repository:
 
-  ```bash
-    git clone https://github.com/habidbesp/rest-api-node-typescript-server.git
+```bash
+  git clone https://github.com/habidbesp/rest-api-node-typescript-server.git
 
-    cd rest-api-node-typescript-server
-  ```
+  cd rest-api-node-typescript-server
+```
 
-  2. Install dependencies:
+2. Install dependencies:
 
-  ```bash
-    npm install
-  ```
+```bash
+  npm install
+```
 
-  3. Create a `.env` file in the root directory with the following variable (adjust as needed for your environment):
+3. Create a `.env` file in the root directory with the following variable (adjust as needed for your environment):
 
-  ```env
-    DATABASE_URL=your_postgresql_database_url
-  ```
+```env
+  DATABASE_URL=your_postgresql_database_url
+```
 
-  4. Run the development server:
+4. Run the development server:
 
-  ```bash
-    npm run dev
-  ```
+```bash
+  npm run dev
+```
 
-  This will start the server with Nodemon, and the API will be available at http://localhost:4000.
+This will start the server with Nodemon, and the API will be available at http://localhost:4000.
 
 ## API Documentation
 
