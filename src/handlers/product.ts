@@ -63,5 +63,5 @@ export const deleteProduct = async (req: Request, res: Response) => {
   }
 
   await product.destroy();
-  res.json({ data: "Product deleted" });
+  res.json({ data: "Product successful deleted" });
 };
