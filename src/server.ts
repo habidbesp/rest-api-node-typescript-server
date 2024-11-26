@@ -1,10 +1,12 @@
 import express from "express";
 import colors from "colors";
 
+import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
 import swaggerSpec, { swaggerUiOptions } from "./config/swagger";
 
 import router from "./router";
+import cors, { CorsOptions } from "cors";
 import db from "./config/db";
 
 // conect Data Base
@@ -21,16 +23,30 @@ connectDB();
 
 const server = express();
 
-// Read form data
-server.use(express.json());
-
-server.use("/api/products", router);
-
-// Docs
+// Docs - swagger
 server.use(
   "/docs",
   swaggerUi.serve,
   swaggerUi.setup(swaggerSpec, swaggerUiOptions)
 );
+
+// CORS
+const corsOptions: CorsOptions = {
+  origin: function (origin, callback) {
+    if (origin === process.env.FRONTEND_ORIGIN_DEV) {
+      callback(null, true);
+    } else {
+      callback(new Error("No access for this origin"));
+    }
+  },
+};
+
+server.use(cors(corsOptions));
+
+// Read form data
+server.use(express.json());
+
+server.use(morgan("dev"));
+server.use("/api/products", router);
 
 export default server;
