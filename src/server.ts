@@ -31,8 +31,6 @@ server.use(
 );
 
 // CORS
-console.log(process.env.FRONTEND_ORIGIN_PROD);
-
 const corsOptions: CorsOptions = {
   origin: function (origin, callback) {
     if (origin === process.env.FRONTEND_ORIGIN_PROD) {
