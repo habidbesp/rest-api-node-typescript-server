@@ -31,9 +31,11 @@ server.use(
 );
 
 // CORS
+console.log(process.env.FRONTEND_ORIGIN_PROD);
+
 const corsOptions: CorsOptions = {
   origin: function (origin, callback) {
-    if (origin === process.env.FRONTEND_ORIGIN_DEV) {
+    if (origin === process.env.FRONTEND_ORIGIN_PROD) {
       callback(null, true);
     } else {
       callback(new Error("No access for this origin"));
