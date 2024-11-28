@@ -2,6 +2,12 @@
 
 This project is a simple yet complete RESTful API built using **Node.js**, **TypeScript**, and **PostgreSQL**. It simulates an electronic product database for a fictional store, providing a single route for creating products. The API is designed with scalability in mind, includes testing with **Jest** and **Supertest**, and is fully documented using **Swagger**.
 
+## Project Links
+
+- [Live API with Swagger Documentation](https://rest-api-node-typescript-ke5s.onrender.com/docs)
+- [Frontend Demo](https://electronic-store-rho.vercel.app)
+- [Frontend Repository](https://github.com/habidbesp/Electronic-Products)
+
 ## Features
 
 - **Express.js** server built with TypeScript.
@@ -10,12 +16,6 @@ This project is a simple yet complete RESTful API built using **Node.js**, **Typ
 - **Swagger** documentation for easy API exploration.
 - **Jest** and **Supertest** tests for API endpoint validation.
 - Deployed and accessible via **Render**.
-
-## Project Links
-
-- [Live API with Swagger Documentation](https://rest-api-node-typescript-ke5s.onrender.com/docs)
-- [Frontend Demo](https://electronic-store-rho.vercel.app)
-- [Frontend Repository](https://github.com/habidbesp/Electronic-Products)
 
 This will open the Swagger UI, where you can explore the available endpoints and test the API directly.
 
