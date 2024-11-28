@@ -11,11 +11,11 @@ This project is a simple yet complete RESTful API built using **Node.js**, **Typ
 - **Jest** and **Supertest** tests for API endpoint validation.
 - Deployed and accessible via **Render**.
 
-## Live Demo
+## Project Links
 
-You can access the live deployment of the API with the full Swagger documentation at the following link:
-
-[Live API with Swagger Documentation](https://rest-api-node-typescript-ke5s.onrender.com/docs/)
+- [Live API with Swagger Documentation](https://rest-api-node-typescript-ke5s.onrender.com/docs)
+- [Frontend Demo](https://electronic-store-rho.vercel.app)
+- [Frontend Repository](https://github.com/habidbesp/Electronic-Products)
 
 This will open the Swagger UI, where you can explore the available endpoints and test the API directly.
 
