@@ -23,17 +23,15 @@ connectDB();
 
 const server = express();
 
-// Docs - swagger
-server.use(
-  "/docs",
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerSpec, swaggerUiOptions)
-);
+const allowedOrigins = [
+  process.env.FRONTEND_ORIGIN_PROD,
+  process.env.API_ORIGIN_URL, // Same server for Swagger y API
+];
 
 // CORS
 const corsOptions: CorsOptions = {
   origin: function (origin, callback) {
-    if (origin === process.env.FRONTEND_ORIGIN_PROD) {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("No access for this origin"));
@@ -42,6 +40,13 @@ const corsOptions: CorsOptions = {
 };
 
 server.use(cors(corsOptions));
+
+// Docs - swagger
+server.use(
+  "/docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec, swaggerUiOptions)
+);
 
 // Read form data
 server.use(express.json());
