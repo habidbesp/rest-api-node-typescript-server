@@ -17,8 +17,6 @@ This project is a simple yet complete RESTful API built using **Node.js**, **Typ
 - **Jest** and **Supertest** tests for API endpoint validation.
 - Deployed and accessible via **Render**.
 
-This will open the Swagger UI, where you can explore the available endpoints and test the API directly.
-
 ### Example Endpoints:
 
 - GET /api/products: Retrieve all products in the store.
